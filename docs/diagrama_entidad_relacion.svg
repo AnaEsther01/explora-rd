@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1060" viewBox="0 0 1440 1060" font-family="Poppins, 'Segoe UI', Arial, sans-serif">
+<style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap");.campo{font-size:17px;fill:#1B2B30}.etq{font-size:15px;fill:#0B3C49}.card{font-size:24px;font-weight:700;fill:#D9822B}.titulo{font-size:20px;font-weight:700;fill:#fff}.linea{stroke:#0B3C49;stroke-width:2.2;fill:none}</style>
+<rect width="1440" height="1060" fill="#fff"/>
+<path class="linea" d="M 190 200 V 30 H 1250 V 200"/>
+<text class="etq" x="720" y="22" paint-order="stroke" stroke="#fff" stroke-width="6">publica (agencia)</text>
+<text class="card" x="200" y="190" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="1260" y="190" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 340 262 L 570 167"/>
+<text class="etq" x="420" y="192" paint-order="stroke" stroke="#fff" stroke-width="6">hace (turista)</text>
+<text class="card" x="352" y="258" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="548" y="156" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 340 400 L 570 477"/>
+<text class="etq" x="440" y="425" paint-order="stroke" stroke="#fff" stroke-width="6">escribe</text>
+<text class="card" x="352" y="396" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="548" y="468" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 340 500 L 570 797"/>
+<text class="etq" x="420" y="640" paint-order="stroke" stroke="#fff" stroke-width="6">guarda</text>
+<text class="card" x="352" y="520" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="548" y="785" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 190 550 V 640"/>
+<text class="etq" x="200" y="600" paint-order="stroke" stroke="#fff" stroke-width="6">pide (turista)</text>
+<text class="card" x="168" y="576" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="168" y="630" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 1100 262 L 870 201"/>
+<text class="etq" x="960" y="216" paint-order="stroke" stroke="#fff" stroke-width="6">recibe</text>
+<text class="card" x="1080" y="258" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="880" y="192" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 1100 400 L 870 511"/>
+<text class="etq" x="960" y="440" paint-order="stroke" stroke="#fff" stroke-width="6">recibe</text>
+<text class="card" x="1080" y="396" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="880" y="500" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 1100 500 L 870 831"/>
+<text class="etq" x="960" y="650" paint-order="stroke" stroke="#fff" stroke-width="6">está en</text>
+<text class="card" x="1080" y="520" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="880" y="820" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<path class="linea" d="M 1250 640 V 550"/>
+<text class="etq" x="1262" y="600" paint-order="stroke" stroke="#fff" stroke-width="6">tiene</text>
+<text class="card" x="1228" y="632" paint-order="stroke" stroke="#fff" stroke-width="5">1</text>
+<text class="card" x="1228" y="576" paint-order="stroke" stroke="#fff" stroke-width="5">N</text>
+<g>
+<rect x="40" y="200" width="300" height="352" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="40" y="200" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="190" y="230" text-anchor="middle">usuarios</text>
+<text class="campo" x="54" y="269">🔑 id (PK)</text>
+<line x1="40" y1="280" x2="340" y2="280" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="303">nombre</text>
+<line x1="40" y1="314" x2="340" y2="314" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="337">correo (único)</text>
+<line x1="40" y1="348" x2="340" y2="348" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="371">contrasena</text>
+<line x1="40" y1="382" x2="340" y2="382" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="405">telefono</text>
+<line x1="40" y1="416" x2="340" y2="416" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="439">rol (turista / agencia / admin)</text>
+<line x1="40" y1="450" x2="340" y2="450" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="473">activo</text>
+<line x1="40" y1="484" x2="340" y2="484" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="507" font-style="italic" fill="#5B6E73" font-size="15">nombre_comercial · whatsapp</text>
+<line x1="40" y1="518" x2="340" y2="518" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="541" font-style="italic" fill="#5B6E73" font-size="15">logo · descripcion · direccion</text>
+</g>
+<g>
+<rect x="40" y="640" width="300" height="352" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="40" y="640" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="190" y="670" text-anchor="middle">solicitudes</text>
+<rect x="266" y="651" width="64" height="24" rx="12" fill="#F1E3C6"/>
+<text x="298" y="668" text-anchor="middle" font-size="12" font-weight="700" fill="#0B3C49">NUEVA</text>
+<text class="campo" x="54" y="709">🔑 id (PK)</text>
+<line x1="40" y1="720" x2="340" y2="720" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="743">🔗 usuario_id (FK)</text>
+<line x1="40" y1="754" x2="340" y2="754" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="777">servicio (asesoria / vehiculo)</text>
+<line x1="40" y1="788" x2="340" y2="788" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="811">lugar</text>
+<line x1="40" y1="822" x2="340" y2="822" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="845">fecha_inicio</text>
+<line x1="40" y1="856" x2="340" y2="856" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="879">fecha_fin</text>
+<line x1="40" y1="890" x2="340" y2="890" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="913">tipo_vehiculo</text>
+<line x1="40" y1="924" x2="340" y2="924" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="947">estado</text>
+<line x1="40" y1="958" x2="340" y2="958" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="54" y="981">respuesta</text>
+</g>
+<g>
+<rect x="570" y="70" width="300" height="250" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="570" y="70" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="720" y="100" text-anchor="middle">reservas</text>
+<text class="campo" x="584" y="139">🔑 id (PK)</text>
+<line x1="570" y1="150" x2="870" y2="150" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="173">🔗 usuario_id (FK)</text>
+<line x1="570" y1="184" x2="870" y2="184" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="207">🔗 excursion_id (FK)</text>
+<line x1="570" y1="218" x2="870" y2="218" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="241">fecha</text>
+<line x1="570" y1="252" x2="870" y2="252" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="275">cantidad_personas</text>
+<line x1="570" y1="286" x2="870" y2="286" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="309">estado</text>
+</g>
+<g>
+<rect x="570" y="380" width="300" height="250" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="570" y="380" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="720" y="410" text-anchor="middle">resenas</text>
+<rect x="796" y="391" width="64" height="24" rx="12" fill="#F1E3C6"/>
+<text x="828" y="408" text-anchor="middle" font-size="12" font-weight="700" fill="#0B3C49">NUEVA</text>
+<text class="campo" x="584" y="449">🔑 id (PK)</text>
+<line x1="570" y1="460" x2="870" y2="460" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="483">🔗 usuario_id (FK)</text>
+<line x1="570" y1="494" x2="870" y2="494" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="517">🔗 excursion_id (FK)</text>
+<line x1="570" y1="528" x2="870" y2="528" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="551">estrellas (1 a 5)</text>
+<line x1="570" y1="562" x2="870" y2="562" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="585">comentario</text>
+<line x1="570" y1="596" x2="870" y2="596" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="619">visible</text>
+</g>
+<g>
+<rect x="570" y="700" width="300" height="182" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="570" y="700" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="720" y="730" text-anchor="middle">favoritos</text>
+<rect x="796" y="711" width="64" height="24" rx="12" fill="#F1E3C6"/>
+<text x="828" y="728" text-anchor="middle" font-size="12" font-weight="700" fill="#0B3C49">NUEVA</text>
+<text class="campo" x="584" y="769">🔑 id (PK)</text>
+<line x1="570" y1="780" x2="870" y2="780" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="803">🔗 usuario_id (FK)</text>
+<line x1="570" y1="814" x2="870" y2="814" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="837">🔗 excursion_id (FK)</text>
+<line x1="570" y1="848" x2="870" y2="848" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="584" y="871">created_at</text>
+</g>
+<g>
+<rect x="1100" y="200" width="300" height="352" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="1100" y="200" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="1250" y="230" text-anchor="middle">excursiones</text>
+<text class="campo" x="1114" y="269">🔑 id (PK)</text>
+<line x1="1100" y1="280" x2="1400" y2="280" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="303">🔗 agencia_id (FK)</text>
+<line x1="1100" y1="314" x2="1400" y2="314" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="337">🔗 destino_id (FK)</text>
+<line x1="1100" y1="348" x2="1400" y2="348" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="371">tipo</text>
+<line x1="1100" y1="382" x2="1400" y2="382" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="405">categoria</text>
+<line x1="1100" y1="416" x2="1400" y2="416" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="439">titulo</text>
+<line x1="1100" y1="450" x2="1400" y2="450" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="473">precio</text>
+<line x1="1100" y1="484" x2="1400" y2="484" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="507">duracion</text>
+<line x1="1100" y1="518" x2="1400" y2="518" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="541">disponible</text>
+</g>
+<g>
+<rect x="1100" y="640" width="300" height="284" fill="#fff" stroke="#0B3C49" stroke-width="2"/>
+<rect x="1100" y="640" width="300" height="46" fill="#0E8A92" stroke="#0B3C49" stroke-width="2"/>
+<text class="titulo" x="1250" y="670" text-anchor="middle">destinos</text>
+<text class="campo" x="1114" y="709">🔑 id (PK)</text>
+<line x1="1100" y1="720" x2="1400" y2="720" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="743">nombre</text>
+<line x1="1100" y1="754" x2="1400" y2="754" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="777">provincia</text>
+<line x1="1100" y1="788" x2="1400" y2="788" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="811">tipo</text>
+<line x1="1100" y1="822" x2="1400" y2="822" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="845">latitud</text>
+<text x="1386" y="845" text-anchor="end" font-size="12" font-weight="700" fill="#D9822B">nuevo</text>
+<line x1="1100" y1="856" x2="1400" y2="856" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="879">longitud</text>
+<text x="1386" y="879" text-anchor="end" font-size="12" font-weight="700" fill="#D9822B">nuevo</text>
+<line x1="1100" y1="890" x2="1400" y2="890" stroke="#0B3C49" stroke-width="1.2"/>
+<text class="campo" x="1114" y="913">foto</text>
+</g>
+<rect x="470" y="925" width="560" height="118" rx="12" fill="#F7FBFB" stroke="#CFE3E4"/>
+<text x="488" y="955" font-size="14.5" fill="#0B3C49">1 = uno   ·   N = muchos   ·   🔑 PK = clave primaria   ·   🔗 FK = clave foránea</text>
+<text x="488" y="980" font-size="14.5" fill="#0B3C49">favoritos une usuarios y excursiones: relación muchos a muchos (N:M).</text>
+<text x="488" y="1005" font-size="14.5" fill="#0B3C49">Cada turista deja una sola reseña y un solo favorito por excursión.</text>
+<text x="488" y="1030" font-size="14.5" fill="#0B3C49">Tablas «NUEVA»: agregadas después del diseño del Paso 5.</text>
+</svg>

@@ -1,0 +1,59 @@
+CRÉDITOS DE LAS FOTOGRAFÍAS DE EXPLORA RD
+=========================================
+
+Todas las fotos son de uso gratuito (también comercial) según la
+Licencia Unsplash (https://unsplash.com/license) o la Licencia Pexels
+(https://www.pexels.com/license/). No se pueden vender ni regalar
+las fotos por sí solas; sí se pueden usar dentro de la página.
+
+Archivo                                  Autor                            Fuente
+---------------------------------------  -------------------------------  ----------------------------------------------
+img/portada.jpg                          Nicolas Hoizey                   https://unsplash.com/photos/ouL9Ccp5KXw
+  (Playa Morón, El Limón, Samaná)
+img/destinos/jarabacoa.jpg               Eriel Ezequiel Reyes Saviñon     https://unsplash.com/photos/lkYuR4GlGUs
+img/destinos/bahia-de-las-aguilas.jpg    Alberto Guzman                   https://www.pexels.com/photo/36949951/
+  (playa de Pedernales)
+img/destinos/punta-cana.jpg              Miltiadis Fragkidis              https://unsplash.com/photos/G1eX84zMPo4
+img/destinos/santo-domingo.jpg           Ruddy Corporan                   https://unsplash.com/photos/1zYWq3rdi8Y
+  (Zona Colonial)
+img/destinos/samana.jpg                  Zen zeee                         https://unsplash.com/photos/epNWm9wwb-o
+img/excursiones/catamaran-saona.jpg      Rachid Oucharia                  https://unsplash.com/photos/1PwLUZwNmJQ
+  (isla Saona)
+img/destinos/puerto-plata.jpg            Yenny Wu                         https://unsplash.com/photos/GlKC5AMPXqY
+img/destinos/la-romana.jpg               Meg von Haartman                 https://unsplash.com/photos/JI2HhW9Yg7g
+  (Bayahíbe)
+img/destinos/barahona.jpg                Aldward Castillo                 https://unsplash.com/photos/q9w4uLJpIIM
+img/destinos/constanza.jpg               Enmanuel Abreu                   https://unsplash.com/photos/WIi54K7f3ZU
+img/destinos/montecristi.jpg             Eddy Vittini                     https://unsplash.com/photos/5HsOB97kvlo
+  (El Morro de Montecristi)
+img/destinos/santiago.jpg                Antonio Lopez                    https://unsplash.com/photos/1yIkqJhEdIE
+  (Monumento a los Héroes de la Restauración)
+img/destinos/miches.jpg                  Damian Dominguez                 https://unsplash.com/photos/MKY8KAHQ-p0
+
+Descargadas el 18/11/2026.
+
+Fotos de las excursiones (descargadas el 19/11/2026)
+---------------------------------------  -------------------------------  ----------------------------------------------
+img/excursiones/saltos-jarabacoa.jpg     Alberto Guzman                   https://www.pexels.com/photo/36999030/
+  (cascada en Jarabacoa)
+img/excursiones/rafting-jarabacoa.jpg    Man Fong Wong                    https://www.pexels.com/photo/33986451/
+  (FOTO ILUSTRATIVA: no es del río Yaque del Norte)
+img/excursiones/ruta-aventura-jarabacoa.jpg  Oseas Cruz                   https://www.pexels.com/photo/38407632/
+  (FOTO ILUSTRATIVA: montaña con pinos, lugar no indicado)
+img/excursiones/bahia-aguilas-bote.jpg   Alberto Guzman                   https://www.pexels.com/photo/36949951/
+  (playa de Pedernales; es la misma foto del destino)
+img/excursiones/buggies-macao.jpg        Ray Graciano                     https://unsplash.com/photos/Rv2etXfWgWU
+  (Punta Cana)
+img/excursiones/recorrido-cultural-sd.jpg  Julio Loaiza Miranda           https://www.pexels.com/photo/31749062/
+  (Fortaleza Ozama, Santo Domingo)
+img/excursiones/ruta-gastronomica.jpg    Raul Baz                         https://unsplash.com/photos/pOCJHyIN6Xs
+  (Juan Dolio)
+img/excursiones/playa-samana.jpg         Joaquin Reyes Ramos              https://www.pexels.com/photo/38759852/
+  (Samaná)
+
+Fotos de los servicios (descargadas el 19/11/2026)
+---------------------------------------  -------------------------------  ----------------------------------------------
+img/asesorias.jpg                        Anastasia Shuraeva               https://www.pexels.com/photo/4406815/
+  (FOTO ILUSTRATIVA: pareja planeando un viaje con un mapa)
+img/renta-vehiculos.jpg                  Edgar Del Valle                  https://www.pexels.com/photo/6220888/
+  (FOTO ILUSTRATIVA: jeepeta entre palmeras, lugar no indicado)

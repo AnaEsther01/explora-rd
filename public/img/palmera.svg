@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 280" aria-hidden="true">
+  <!-- Tronco -->
+  <path d="M118 278 C 122 220, 112 150, 104 92" fill="none" stroke="#B9732F" stroke-width="18" stroke-linecap="round"/>
+  <path d="M118 278 C 122 220, 112 150, 104 92" fill="none" stroke="#D9924A" stroke-width="18" stroke-linecap="round" stroke-dasharray="4 14"/>
+  <!-- Hojas de atrás (verde oscuro) -->
+  <g fill="#3F7F3A">
+    <path d="M104 88 C 70 52, 26 56, 4 96 C 34 74, 70 72, 104 88Z"/>
+    <path d="M104 88 C 140 50, 186 54, 214 92 C 180 72, 140 72, 104 88Z"/>
+    <path d="M104 88 C 96 46, 112 14, 140 4 C 122 30, 112 56, 104 88Z"/>
+  </g>
+  <!-- Hojas de adelante (verde claro) -->
+  <g fill="#6FAE45">
+    <path d="M104 88 C 72 70, 38 92, 26 140 C 48 108, 76 96, 104 88Z"/>
+    <path d="M104 88 C 138 72, 176 96, 190 142 C 166 110, 136 98, 104 88Z"/>
+    <path d="M104 88 C 84 52, 54 34, 20 40 C 52 50, 80 64, 104 88Z"/>
+    <path d="M104 88 C 128 54, 162 36, 196 44 C 164 52, 130 66, 104 88Z"/>
+  </g>
+  <!-- Cocos -->
+  <circle cx="98" cy="96" r="7" fill="#7A4A1E"/>
+  <circle cx="111" cy="97" r="7" fill="#8A5524"/>
+</svg>

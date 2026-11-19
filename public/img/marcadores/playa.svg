@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <!-- Marcador de posición: playa al atardecer -->
+  <defs>
+    <linearGradient id="c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7FB9C4"/><stop offset=".55" stop-color="#F6D7A7"/><stop offset=".7" stop-color="#F9C88F"/>
+    </linearGradient>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6FB9B4"/><stop offset="1" stop-color="#23858A"/>
+    </linearGradient>
+    <radialGradient id="s"><stop offset="0" stop-color="#FFF4D2"/><stop offset=".3" stop-color="#FFE3A6" stop-opacity=".8"/><stop offset="1" stop-color="#FFE3A6" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#c)"/>
+  <circle cx="200" cy="196" r="90" fill="url(#s)"/>
+  <g fill="#FFFFFF" opacity=".45"><ellipse cx="90" cy="60" rx="70" ry="10"/><ellipse cx="300" cy="90" rx="80" ry="9"/></g>
+  <rect y="196" width="400" height="104" fill="url(#m)"/>
+  <path d="M150 206 H250 M170 218 H230 M120 232 H200" stroke="#FFF1C9" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+  <path d="M0 262 Q200 244 400 262 V300 H0Z" fill="#E9D6A8"/>
+  <path d="M362 300 C 356 250, 340 200, 318 160" stroke="#2E3B32" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g fill="#2E4A3A">
+    <path d="M318 160 C 290 140, 250 140, 228 160 C 255 150, 290 152, 318 160Z"/>
+    <path d="M318 160 C 300 170, 280 190, 272 214 C 286 192, 302 176, 318 160Z"/>
+    <path d="M318 160 C 340 136, 372 132, 400 142 C 372 140, 342 148, 318 160Z"/>
+    <path d="M318 160 C 344 166, 366 184, 376 208 C 360 186, 340 172, 318 160Z"/>
+    <path d="M318 160 C 312 136, 320 116, 338 104 C 326 122, 320 140, 318 160Z"/>
+  </g>
+</svg>

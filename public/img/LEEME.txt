@@ -1,0 +1,37 @@
+CARPETA DE IMÁGENES DE EXPLORA RD
+=================================
+
+Mientras no haya fotos, la página muestra marcadores de posición de colores.
+Cuando tengas fotos propias (o con permiso de su autor), guárdalas con
+ESTOS NOMBRES EXACTOS y aparecerán solas en la página:
+
+Portada (foto grande de arriba, horizontal, mínimo 1920 px de ancho):
+  img/portada.jpg
+
+Destinos (img/destinos/):
+  jarabacoa.jpg
+  bahia-de-las-aguilas.jpg
+  punta-cana.jpg
+  santo-domingo.jpg
+  samana.jpg
+
+Excursiones (img/excursiones/):
+  rafting-jarabacoa.jpg
+  saltos-jarabacoa.jpg
+  ruta-aventura-jarabacoa.jpg
+  bahia-aguilas-bote.jpg
+  catamaran-saona.jpg
+  buggies-macao.jpg
+  recorrido-cultural-sd.jpg
+  ruta-gastronomica.jpg
+  playa-samana.jpg
+
+Servicios (img/):
+  asesorias.jpg
+  renta-vehiculos.jpg
+
+Galería (img/galeria/):
+  galeria-1.jpg ... galeria-6.jpg
+
+Consejo: usa fotos horizontales y que no pesen más de 300 KB cada una
+para que la página cargue rápido en el celular.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Explora RD">
+  <!-- Círculo turquesa -->
+  <circle cx="24" cy="24" r="24" fill="#0E8A92"/>
+  <!-- Arena -->
+  <path d="M8 38 Q24 33 40 38 A20 20 0 0 1 8 38Z" fill="#F1E3C6"/>
+  <!-- Tronco -->
+  <path d="M26 37 Q27 29 23.5 20" fill="none" stroke="#F1E3C6" stroke-width="3" stroke-linecap="round"/>
+  <!-- Hojas de la palmera -->
+  <g fill="#FFFFFF">
+    <path d="M23.5 20 Q16 12 7 17 Q15 15.5 23.5 20Z"/>
+    <path d="M23.5 20 Q17 18 11.5 25 Q17.5 20.5 23.5 20Z"/>
+    <path d="M23.5 20 Q31 12 40.5 16.5 Q32 15 23.5 20Z"/>
+    <path d="M23.5 20 Q30 18.5 36 25 Q29.5 21 23.5 20Z"/>
+    <path d="M23.5 20 Q22 12 27 7 Q24.5 13 23.5 20Z"/>
+  </g>
+  <circle cx="23.5" cy="20.5" r="1.8" fill="#0B3C49"/>
+</svg>

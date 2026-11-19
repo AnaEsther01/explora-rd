@@ -1,0 +1,1162 @@
+/* =========================================================
+   EXPLORA RD — Estilos generales
+   Colores: turquesa #0E8A92 · azul oscuro #0B3C49 · blanco · arena #F1E3C6
+   Letras: Lora (títulos) · Poppins (textos y botones)
+   ========================================================= */
+
+:root {
+    --turquesa: #0E8A92;
+    --turquesa-oscuro: #0A6F76;
+    --turquesa-claro: #D3EEEF;
+    --azul: #0B3C49;
+    --blanco: #FFFFFF;
+    --arena: #F1E3C6;
+    --arena-clara: #FAF5EA;
+    --gris-texto: #5B6B70;
+    --whatsapp: #25D366;
+    --sombra: 0 12px 34px rgba(11, 60, 73, .12);
+    --sombra-fuerte: 0 22px 50px rgba(11, 60, 73, .22);
+    --radio: 18px;
+    --bs-body-font-family: 'Poppins', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: var(--azul);
+    background: var(--blanco);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .subtitulo-lora { font-family: 'Lora', Georgia, serif; }
+
+a { color: var(--turquesa); }
+a:hover { color: var(--turquesa-oscuro); }
+
+/* ---------- Botones ---------- */
+.btn { font-family: 'Poppins', sans-serif; font-weight: 600; border-radius: 12px; }
+
+.btn-turquesa { background: var(--turquesa); color: var(--blanco); border: 0; padding: .7rem 1.3rem; }
+.btn-turquesa:hover, .btn-turquesa:focus { background: var(--turquesa-oscuro); color: var(--blanco); }
+
+.btn-arena { background: var(--arena); color: var(--azul); border: 0; }
+.btn-arena:hover { background: var(--blanco); color: var(--azul); }
+
+.btn-whatsapp {
+    background: var(--whatsapp); color: var(--blanco);
+    width: 46px; height: 46px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center; font-size: 1.3rem; padding: 0;
+}
+.btn-whatsapp:hover { background: #1EBE5A; color: var(--blanco); }
+
+/* ---------- Logo ---------- */
+.logo-texto {
+    font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.45rem;
+    color: var(--blanco); margin-left: .6rem; letter-spacing: -.3px;
+}
+.logo-icono { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .15)); }
+
+/* ---------- Menú ---------- */
+#menu { padding: 1.1rem 0; transition: background .3s, padding .3s, box-shadow .3s; }
+
+#menu .nav-link {
+    color: rgba(255, 255, 255, .88); font-weight: 400; font-size: .92rem; padding: .5rem .85rem;
+}
+#menu .nav-link:hover, #menu .nav-link.active { color: var(--blanco); }
+#menu .nav-link.active { font-weight: 500; }
+
+/* Botones en forma de pastilla: idioma y Entrar */
+.btn-pastilla {
+    color: var(--blanco); font-size: .85rem; font-weight: 500;
+    background: rgba(11, 60, 73, .28); border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 30px; padding: .4rem 1rem;
+    backdrop-filter: blur(6px);
+}
+.btn-pastilla:hover, .btn-pastilla:focus, .btn-pastilla.show {
+    color: var(--blanco); background: rgba(11, 60, 73, .5); border-color: rgba(255, 255, 255, .6);
+}
+
+.navbar-toggler { border: 0; color: var(--blanco); font-size: 2rem; padding: 0 .25rem; }
+.navbar-toggler:focus { box-shadow: none; }
+
+/* Menú cuando bajas por la página: fondo blanco */
+#menu.menu-solido { background: var(--blanco); padding: .6rem 0; box-shadow: 0 4px 20px rgba(11, 60, 73, .08); }
+#menu.menu-solido .logo-texto { color: var(--azul); }
+#menu.menu-solido .nav-link { color: var(--azul); }
+#menu.menu-solido .nav-link.active, #menu.menu-solido .nav-link:hover { color: var(--turquesa); }
+#menu.menu-solido .btn-pastilla { color: var(--azul); background: var(--turquesa-claro); border-color: transparent; backdrop-filter: none; }
+#menu.menu-solido .btn-pastilla:hover, #menu.menu-solido .btn-pastilla.show { background: var(--turquesa); color: var(--blanco); }
+#menu.menu-solido .navbar-toggler { color: var(--azul); }
+
+.dropdown-item.active, .dropdown-item:active { background: var(--turquesa); }
+
+/* Menú abierto en el celular */
+@media (max-width: 991.98px) {
+    #menu .navbar-collapse {
+        background: var(--azul); border-radius: var(--radio);
+        padding: 1rem; margin-top: .8rem; box-shadow: var(--sombra-fuerte);
+    }
+    #menu .navbar-collapse .nav-link,
+    #menu.menu-solido .navbar-collapse .nav-link { color: var(--blanco); }
+    #menu .menu-acciones { padding-top: .8rem; border-top: 1px solid rgba(255, 255, 255, .15); margin-top: .5rem; }
+    #menu.menu-solido .navbar-collapse .btn-pastilla { color: var(--blanco); background: rgba(255, 255, 255, .12); border-color: rgba(255, 255, 255, .35); }
+}
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+.portada {
+    position: relative;
+    min-height: 82vh;
+    display: flex; align-items: center;
+    padding: 120px 0 90px;
+    /* Foto de fondo con un filtro turquesa encima, como en el diseño de referencia */
+    background:
+        linear-gradient(180deg, rgba(11, 60, 73, .45) 0%, rgba(14, 138, 146, .30) 40%, rgba(14, 138, 146, .38) 75%, rgba(11, 60, 73, .50) 100%),
+        var(--foto-portada) center / cover no-repeat,
+        #2E8E92;
+    overflow: hidden;
+}
+
+.portada-contenido { position: relative; z-index: 2; text-align: center; }
+
+.portada-titulo {
+    color: var(--blanco); font-weight: 700;
+    font-size: clamp(2.2rem, 5.6vw, 4.4rem); line-height: 1.1;
+    text-shadow: 0 4px 24px rgba(11, 60, 73, .45);
+    margin-bottom: .7rem;
+}
+
+.portada-subtitulo {
+    color: rgba(255, 255, 255, .92); font-size: clamp(.95rem, 1.6vw, 1.1rem); font-weight: 300;
+    text-shadow: 0 2px 12px rgba(11, 60, 73, .45);
+    margin-bottom: 2.4rem;
+}
+
+/* ---------- Pestañas + buscador (caja blanca compacta) ---------- */
+.buscador-caja { max-width: 820px; margin: 0 auto; }
+
+.pestanas { justify-content: flex-start; gap: .35rem; flex-wrap: nowrap; padding-left: .3rem; }
+
+.pestana {
+    border: 0; background: rgba(255, 255, 255, .55); color: var(--azul);
+    font-weight: 600; font-size: .82rem;
+    padding: .6rem 1.05rem; border-radius: 12px 12px 0 0;
+    transition: background .2s, color .2s; white-space: nowrap;
+    backdrop-filter: blur(6px);
+}
+.pestana i { display: none; }
+.pestana:hover { background: rgba(255, 255, 255, .8); }
+.pestana.active { background: var(--blanco); color: var(--turquesa); }
+
+.buscador {
+    background: var(--blanco); border-radius: 16px;
+    padding: 1rem 1.1rem 1.1rem; box-shadow: var(--sombra-fuerte); text-align: left;
+}
+
+.buscador .form-label { font-weight: 600; font-size: .74rem; color: var(--azul); margin-bottom: .3rem; }
+
+.campo-icono { position: relative; }
+.campo-icono > i {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    color: var(--turquesa); pointer-events: none; z-index: 2; font-size: .9rem;
+}
+.campo-icono .form-control, .campo-icono .form-select {
+    padding: .55rem .8rem .55rem 2.2rem; border-radius: 10px; border: 1px solid #DCE5E7;
+    font-size: .86rem; color: var(--azul); min-height: 44px;
+}
+/* El primer campo lleva un fondo suave, como en la referencia */
+#campoDestino { background: #EEF6F6; border-color: #E1EEEE; }
+.campo-icono .form-control::placeholder { color: #7C8C90; }
+.campo-icono .form-control:focus, .campo-icono .form-select:focus {
+    border-color: var(--turquesa); box-shadow: 0 0 0 .2rem rgba(14, 138, 146, .15);
+}
+.btn-buscar { min-height: 44px; font-size: .9rem; border-radius: 10px; padding: .5rem 1rem; }
+
+/* Pestañas en el celular: se desplazan de lado */
+@media (max-width: 767.98px) {
+    .portada { padding: 110px 0 60px; min-height: auto; }
+    .pestanas { overflow-x: auto; scrollbar-width: none; padding-left: 0; }
+    .pestanas::-webkit-scrollbar { display: none; }
+    .pestana i { display: inline-block; }
+    .buscador { border-top-left-radius: 0; }
+    .campo-icono .form-control, .campo-icono .form-select, .btn-buscar { min-height: 48px; font-size: .95rem; }
+    .whatsapp-flotante { right: 16px; bottom: 16px; }
+}
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+.seccion { padding: 90px 0; }
+.seccion-arena { background: var(--arena-clara); }
+.seccion-clara { background: #F3F8F8; padding-top: 60px; }
+.titulo-flecha { font-size: .65em; vertical-align: middle; -webkit-text-stroke: 1px; }
+
+.seccion-encabezado {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem;
+}
+
+.seccion-etiqueta {
+    display: inline-block; color: var(--turquesa); font-weight: 700;
+    font-size: .82rem; letter-spacing: .22em; text-transform: uppercase; margin-bottom: .5rem;
+}
+.etiqueta-clara { color: var(--arena); }
+
+.seccion-titulo {
+    font-weight: 700; color: var(--turquesa);
+    font-size: clamp(1.8rem, 3.6vw, 2.7rem); margin-bottom: .6rem;
+}
+.seccion-texto { color: var(--gris-texto); margin-bottom: 0; }
+.seccion-texto + .seccion-texto { margin-top: 1rem; }
+
+.enlace-ver-todo { font-weight: 600; text-decoration: none; white-space: nowrap; }
+.enlace-ver-todo i { transition: transform .2s; display: inline-block; }
+.enlace-ver-todo:hover i { transform: translateX(4px); }
+
+.contenedor-estrecho { max-width: 820px; }
+
+/* ---------- Fotos y marcadores de posición ---------- */
+.tarjeta-foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.foto-img, .foto-ph { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+
+/* Marcador de posición: un dibujo (public/img/marcadores) mientras no haya foto */
+.foto-ph { position: relative; overflow: hidden; }
+.foto-ph-icono {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    font-size: 3.6rem; line-height: 1; filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .25));
+}
+
+.etiqueta-tipo {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(255, 255, 255, .92); color: var(--azul);
+    font-size: .78rem; font-weight: 600; padding: .3rem .75rem; border-radius: 30px;
+}
+
+/* Etiquetas de las tarjetas de excursiones (como «SALE DESDE BAYAHÍBE») */
+.etiqueta-salida, .etiqueta-lugar {
+    position: absolute; top: 12px; z-index: 2;
+    font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: .32rem .7rem; border-radius: 30px; box-shadow: 0 2px 8px rgba(11, 60, 73, .15);
+}
+.etiqueta-salida { left: 12px; background: var(--turquesa); color: var(--blanco); }
+.etiqueta-lugar  { right: 12px; background: var(--blanco); color: var(--azul); }
+
+/* ---------- Tarjetas de destinos ---------- */
+.tarjeta-destino {
+    display: block; height: 100%; text-decoration: none; color: inherit;
+    background: var(--blanco); border-radius: var(--radio); overflow: hidden;
+    box-shadow: var(--sombra); transition: transform .3s, box-shadow .3s;
+}
+.tarjeta-destino:hover { transform: translateY(-6px); box-shadow: var(--sombra-fuerte); color: inherit; }
+.tarjeta-destino:hover .foto-img, .tarjeta-destino:hover .foto-ph { transform: scale(1.05); }
+
+.tarjeta-destino-texto { padding: 1.1rem 1.25rem 1.3rem; }
+.tarjeta-destino-texto h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: .2rem; color: var(--azul); }
+.tarjeta-destino-texto p { color: var(--gris-texto); font-size: .9rem; margin-bottom: .3rem; }
+.tarjeta-destino-texto .tarjeta-resumen { margin-bottom: .8rem; }
+
+/* ---------- Tarjetas de excursiones ---------- */
+.tarjeta-excursion {
+    height: 100%; display: flex; flex-direction: column;
+    background: var(--blanco); border-radius: var(--radio); overflow: hidden;
+    box-shadow: var(--sombra); transition: transform .3s, box-shadow .3s;
+}
+.tarjeta-excursion:hover { transform: translateY(-6px); box-shadow: var(--sombra-fuerte); }
+.tarjeta-excursion:hover .foto-img, .tarjeta-excursion:hover .foto-ph { transform: scale(1.05); }
+
+.tarjeta-excursion-texto { padding: 1.2rem 1.3rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+.tarjeta-destino-nombre {
+    color: var(--turquesa); font-weight: 700; font-size: .72rem; letter-spacing: .14em;
+    text-transform: uppercase; margin-bottom: .3rem;
+}
+.tarjeta-excursion h3 { font-size: 1.25rem; font-weight: 700; color: var(--azul); margin-bottom: .6rem; }
+
+.tarjeta-datos { color: var(--gris-texto); font-size: .88rem; margin-bottom: 1rem; }
+.tarjeta-datos li { margin-bottom: .2rem; }
+.tarjeta-datos i { color: var(--turquesa); margin-right: .25rem; }
+
+.tarjeta-pie {
+    margin-top: auto; padding-top: 1rem; border-top: 1px solid #EEF1F2;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.precio small { display: block; color: var(--gris-texto); font-size: .75rem; line-height: 1.2; }
+.precio strong { font-size: 1.3rem; color: var(--azul); }
+
+/* ---------- Asesorías y renta ---------- */
+.tarjeta-servicio {
+    background: var(--blanco); border-radius: var(--radio); overflow: hidden;
+    box-shadow: var(--sombra); height: 100%;
+}
+.tarjeta-servicio .tarjeta-foto { aspect-ratio: 16 / 8; }
+.tarjeta-servicio .foto-ph-icono { font-size: 4.5rem; }
+.tarjeta-servicio-texto { padding: 1.6rem; }
+.tarjeta-servicio-texto h3 { font-size: 1.5rem; font-weight: 700; }
+.tarjeta-servicio-texto h3 i { color: var(--turquesa); }
+.tarjeta-servicio-texto p { color: var(--gris-texto); }
+
+/* ---------- Por qué elegirnos ---------- */
+.subtitulo-lora { font-weight: 700; color: var(--azul); font-size: 1.6rem; }
+
+.beneficio {
+    background: var(--arena-clara); border-radius: var(--radio); padding: 1.4rem; height: 100%;
+    border: 1px solid #F1E8D5;
+}
+.beneficio i {
+    display: inline-flex; width: 48px; height: 48px; border-radius: 14px;
+    align-items: center; justify-content: center;
+    background: var(--turquesa); color: var(--blanco); font-size: 1.35rem; margin-bottom: .8rem;
+}
+.beneficio h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: .3rem; }
+.beneficio p { color: var(--gris-texto); font-size: .9rem; margin-bottom: 0; }
+
+/* ---------- Banda para agencias ---------- */
+.seccion-agencias {
+    background:
+        radial-gradient(circle at 90% 20%, rgba(14, 138, 146, .55), transparent 50%),
+        var(--azul);
+    padding: 70px 0;
+}
+.texto-claro { color: rgba(255, 255, 255, .82); }
+
+/* ---------- Galería ---------- */
+.galeria {
+    display: grid; gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+}
+.galeria-item { position: relative; display: block; border-radius: var(--radio); overflow: hidden; }
+.galeria-nombre {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .9rem;
+    background: linear-gradient(180deg, transparent, rgba(11, 60, 73, .75));
+    color: var(--blanco); font-family: 'Lora', serif; font-weight: 700; font-size: 1.15rem;
+}
+.galeria-nombre small { display: block; font-family: 'Poppins', sans-serif; font-weight: 400; font-size: .78rem; opacity: .85; }
+.galeria-item-1 { grid-column: span 2; grid-row: span 2; }
+.galeria-item-4, .galeria-item-5, .galeria-item-6 { grid-column: span 2; }
+.galeria-item:hover .foto-img, .galeria-item:hover .foto-ph { transform: scale(1.05); }
+
+@media (max-width: 767.98px) {
+    .galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+    .galeria-item-4, .galeria-item-5 { grid-column: span 1; }
+}
+
+/* ---------- Preguntas frecuentes ---------- */
+.acordeon .accordion-item {
+    border: 0; border-radius: 14px !important; overflow: hidden;
+    margin-bottom: .8rem; box-shadow: 0 4px 14px rgba(11, 60, 73, .06);
+}
+.acordeon .accordion-button {
+    font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--azul); font-size: 1.02rem; padding: 1.1rem 1.3rem;
+}
+.acordeon .accordion-button:not(.collapsed) { background: var(--turquesa-claro); color: var(--turquesa-oscuro); box-shadow: none; }
+.acordeon .accordion-button:focus { box-shadow: 0 0 0 .2rem rgba(14, 138, 146, .2); }
+.acordeon .accordion-body { color: var(--gris-texto); }
+
+/* ---------- Contacto ---------- */
+.tarjeta-contacto {
+    display: block; text-align: center; text-decoration: none; color: var(--azul);
+    background: var(--blanco); border: 1.5px solid #E4ECEE; border-radius: var(--radio);
+    padding: 2rem 1rem; height: 100%; transition: border-color .2s, transform .2s;
+}
+a.tarjeta-contacto:hover { border-color: var(--turquesa); transform: translateY(-4px); color: var(--azul); }
+.tarjeta-contacto i { font-size: 2rem; color: var(--turquesa); }
+.tarjeta-contacto h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 600; margin: .6rem 0 .2rem; }
+.tarjeta-contacto p { color: var(--gris-texto); margin: 0; word-break: break-word; }
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+.pie { background: var(--azul); color: rgba(255, 255, 255, .8); padding: 70px 0 30px; }
+.pie-texto { font-size: .92rem; max-width: 340px; }
+.pie-titulo { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; color: var(--blanco); margin-bottom: 1rem; }
+.pie-enlaces li { margin-bottom: .55rem; font-size: .92rem; }
+.pie-enlaces a { color: rgba(255, 255, 255, .8); text-decoration: none; }
+.pie-enlaces a:hover { color: var(--arena); }
+.pie-enlaces i { color: var(--arena); margin-right: .35rem; }
+
+.redes { display: flex; gap: .6rem; }
+.redes a {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, .1); color: var(--blanco); text-decoration: none; transition: background .2s;
+}
+.redes a:hover { background: var(--turquesa); }
+
+.pie-linea { border-color: rgba(255, 255, 255, .15); margin: 2.5rem 0 1.5rem; opacity: 1; }
+.pie-copy { font-size: .82rem; text-align: center; color: rgba(255, 255, 255, .6); }
+.pie-copy a { color: rgba(255, 255, 255, .75); }
+
+/* =========================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================= */
+.whatsapp-flotante {
+    position: fixed; right: 22px; bottom: 22px; z-index: 1050;
+    display: inline-flex; align-items: center; gap: .45rem;
+    background: var(--whatsapp); color: var(--blanco);
+    padding: .65rem 1.2rem; border-radius: 40px;
+    font-weight: 600; font-size: .95rem; text-decoration: none;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, .45);
+    transition: transform .2s;
+}
+.whatsapp-flotante i { font-size: 1.35rem; }
+.whatsapp-flotante:hover { transform: scale(1.05); color: var(--blanco); }
+
+/* Aviso del buscador (se coloca encima del botón de WhatsApp) */
+.toast-container { margin-bottom: 80px; }
+#avisoBuscar { background: var(--azul); color: var(--blanco); border-radius: 14px; }
+#avisoBuscar .btn-close { filter: invert(1); }
+
+/* =========================================================
+   ETAPA 4 — PÁGINAS DE DESTINOS Y EXCURSIONES
+   ========================================================= */
+
+/* ---------- Cabecera con foto de las páginas internas ---------- */
+.cabecera {
+    position: relative; display: flex; align-items: flex-end;
+    min-height: 380px; padding: 130px 0 56px;
+    background:
+        linear-gradient(180deg, rgba(11, 60, 73, .55) 0%, rgba(14, 138, 146, .25) 45%, rgba(11, 60, 73, .78) 100%),
+        var(--foto-cabecera) center / cover no-repeat,
+        var(--turquesa);
+    color: var(--blanco);
+}
+.cabecera-alta { min-height: 500px; }
+.cabecera-contenido { position: relative; z-index: 1; max-width: 1140px; }
+.cabecera-titulo {
+    font-weight: 700; font-size: clamp(2.1rem, 5vw, 3.6rem); line-height: 1.1;
+    text-shadow: 0 4px 24px rgba(11, 60, 73, .45); margin-bottom: .6rem; max-width: 900px;
+}
+.cabecera-subtitulo { font-size: clamp(1rem, 1.6vw, 1.15rem); font-weight: 300; max-width: 720px; margin: 0; opacity: .95; }
+.cabecera-etiqueta {
+    display: inline-flex; align-items: center; gap: .4rem; margin-bottom: .9rem;
+    background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .35); backdrop-filter: blur(6px);
+    padding: .35rem .9rem; border-radius: 30px; font-size: .82rem; font-weight: 600; letter-spacing: .03em;
+}
+
+.migas { margin-bottom: 1rem; font-size: .85rem; --bs-breadcrumb-divider-color: rgba(255, 255, 255, .6); --bs-breadcrumb-item-active-color: rgba(255, 255, 255, .85); }
+.migas a { color: var(--blanco); text-decoration: none; opacity: .85; }
+.migas a:hover { opacity: 1; text-decoration: underline; }
+.migas .breadcrumb-item.active { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- Filtros en forma de pastilla ---------- */
+.filtros-pastilla { display: flex; gap: .5rem; flex-wrap: wrap; }
+.pastilla-filtro {
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .5rem 1rem; border-radius: 30px; text-decoration: none;
+    background: var(--blanco); color: var(--azul); border: 1px solid #DCE7E8;
+    font-size: .88rem; font-weight: 500; transition: all .2s;
+}
+.pastilla-filtro i { color: var(--turquesa); }
+.pastilla-filtro:hover { border-color: var(--turquesa); color: var(--turquesa); }
+.pastilla-filtro.activa { background: var(--turquesa); border-color: var(--turquesa); color: var(--blanco); }
+.pastilla-filtro.activa i { color: var(--blanco); }
+@media (max-width: 767.98px) {
+    .filtros-pastilla { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: .25rem; }
+    .filtros-pastilla::-webkit-scrollbar { display: none; }
+    .pastilla-filtro { white-space: nowrap; }
+}
+
+.texto-resultados { color: var(--gris-texto); font-size: .92rem; margin-bottom: 1.2rem; }
+.barra-resultados {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin-bottom: 1.4rem;
+}
+.barra-resultados .form-select { min-width: 210px; border-radius: 10px; }
+.text-turquesa { color: var(--turquesa); }
+
+.aviso-vacio {
+    text-align: center; background: var(--blanco); border: 1.5px dashed #CFE0E2; border-radius: var(--radio);
+    padding: 3rem 1.5rem; color: var(--gris-texto);
+}
+.aviso-vacio i { font-size: 2.6rem; color: var(--turquesa); display: block; margin-bottom: .6rem; }
+
+/* ---------- Cajas laterales (filtros y datos) ---------- */
+.caja-lateral {
+    background: var(--blanco); border-radius: var(--radio); padding: 1.5rem;
+    box-shadow: var(--sombra); position: sticky; top: 96px;
+}
+.caja-lateral-titulo { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.1rem; }
+.caja-lateral .form-label { font-size: .82rem; font-weight: 600; margin-bottom: .3rem; }
+.caja-lateral .form-control, .caja-lateral .form-select { border-radius: 10px; font-size: .9rem; }
+.caja-lateral .campo-icono .form-control { min-height: 44px; }
+.form-range::-webkit-slider-thumb { background: var(--turquesa); }
+.form-range::-moz-range-thumb { background: var(--turquesa); }
+.enlace-limpiar { color: var(--gris-texto); font-size: .88rem; }
+@media (max-width: 991.98px) { .caja-lateral { position: static; } }
+
+.btn-contorno { border: 1.5px solid var(--turquesa); color: var(--turquesa); background: transparent; padding: .65rem 1.2rem; }
+.btn-contorno:hover, .btn-contorno:focus { background: var(--turquesa); color: var(--blanco); }
+.btn-contorno:disabled { border-color: #C9D6D8; color: #8A9A9E; opacity: 1; }
+
+.datos-lista { list-style: none; padding: 0; margin: 0 0 1.4rem; }
+.datos-lista li { display: flex; align-items: center; gap: .6rem; padding: .7rem 0; border-bottom: 1px solid #EEF2F3; font-size: .92rem; }
+.datos-lista li i { color: var(--turquesa); font-size: 1.1rem; }
+.datos-lista li span { color: var(--gris-texto); }
+.datos-lista li strong { margin-left: auto; text-align: right; }
+
+/* ---------- Contenido de detalle ---------- */
+.texto-largo { color: #36545C; font-size: 1.05rem; line-height: 1.8; }
+
+.lista-actividades { list-style: none; padding: 0; display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.lista-actividades li {
+    display: flex; gap: .7rem; align-items: flex-start;
+    background: var(--arena-clara); border: 1px solid #F1E8D5; border-radius: 14px; padding: .9rem 1rem; font-size: .95rem;
+}
+.lista-actividades li i { color: var(--turquesa); font-size: 1.2rem; line-height: 1.2; }
+
+.fotos-destino { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.fotos-destino img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; box-shadow: var(--sombra); }
+
+/* La línea de «experiencias» queda siempre abajo, aunque el texto sea más corto */
+.tarjeta-destino { display: flex; flex-direction: column; }
+.tarjeta-destino-texto { flex: 1; display: flex; flex-direction: column; }
+.tarjeta-contador {
+    display: flex; align-items: center; gap: .4rem; margin: auto 0 0 !important; padding-top: .8rem;
+    border-top: 1px solid #EEF2F3; color: var(--turquesa) !important; font-weight: 600; font-size: .85rem !important;
+}
+
+/* Título de la tarjeta como enlace a la ficha (toda la tarjeta es clicable) */
+.tarjeta-excursion { position: relative; }
+.tarjeta-excursion h3 a { color: inherit; text-decoration: none; }
+.tarjeta-excursion:hover h3 a { color: var(--turquesa); }
+.encima-enlace { position: relative; z-index: 2; }
+
+/* ---------- Ficha de la excursión ---------- */
+.datos-rapidos { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
+.datos-rapidos > div {
+    background: var(--blanco); border: 1px solid #E4ECEE; border-radius: 14px; padding: 1rem;
+    display: flex; flex-direction: column; gap: .15rem;
+}
+.datos-rapidos i { color: var(--turquesa); font-size: 1.3rem; margin-bottom: .2rem; }
+.datos-rapidos span { color: var(--gris-texto); font-size: .78rem; }
+.datos-rapidos strong { font-size: .95rem; }
+@media (max-width: 767.98px) { .datos-rapidos { grid-template-columns: repeat(2, 1fr); } }
+
+.tarjeta-destino-horizontal {
+    display: flex; gap: 1.2rem; align-items: center; text-decoration: none; color: inherit;
+    background: var(--arena-clara); border-radius: var(--radio); padding: 1rem; transition: box-shadow .2s;
+}
+.tarjeta-destino-horizontal:hover { box-shadow: var(--sombra); color: inherit; }
+.tarjeta-destino-horizontal-foto { flex: 0 0 160px; height: 120px; border-radius: 14px; overflow: hidden; }
+.tarjeta-destino-horizontal h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: .3rem; }
+.tarjeta-destino-horizontal p { color: var(--gris-texto); margin: 0; font-size: .92rem; }
+@media (max-width: 575.98px) { .tarjeta-destino-horizontal { flex-direction: column; align-items: stretch; } .tarjeta-destino-horizontal-foto { flex-basis: auto; height: 160px; } }
+
+.caja-reserva {
+    background: var(--blanco); border-radius: var(--radio); box-shadow: var(--sombra-fuerte);
+    overflow: hidden; position: sticky; top: 96px; margin-bottom: 1.5rem;
+}
+.caja-reserva-precio { background: var(--azul); color: var(--blanco); padding: 1.3rem 1.5rem; }
+.caja-reserva-precio small { display: block; opacity: .75; font-size: .8rem; }
+.caja-reserva-precio strong { font-size: 2rem; font-family: 'Lora', serif; line-height: 1.2; }
+.caja-reserva-form { padding: 1.4rem 1.5rem 1.5rem; }
+.caja-reserva-form .form-label { font-size: .82rem; font-weight: 600; margin-bottom: .3rem; }
+.caja-reserva-form .form-control, .caja-reserva-form .form-select { border-radius: 10px; min-height: 46px; }
+.caja-reserva-total {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--turquesa-claro); border-radius: 12px; padding: .8rem 1rem; margin-bottom: 1rem;
+}
+.caja-reserva-total span { font-size: .88rem; }
+.caja-reserva-total strong { font-size: 1.2rem; color: var(--turquesa-oscuro); }
+
+.btn-whatsapp-ancho { background: var(--whatsapp); color: var(--blanco); border: 0; padding: .8rem 1rem; font-size: 1rem; }
+.btn-whatsapp-ancho:hover { background: #1EBE5A; color: var(--blanco); }
+
+.caja-agencia { background: var(--arena-clara); border: 1px solid #F1E8D5; border-radius: var(--radio); padding: 1.4rem; }
+.agencia-logo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.agencia-iniciales {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--turquesa); color: var(--blanco); font-weight: 700; font-size: 1.2rem;
+}
+.agencia-nombre { font-size: 1.2rem; font-weight: 700; margin: 0; }
+.datos-agencia li { display: flex; gap: .55rem; align-items: flex-start; font-size: .9rem; margin-bottom: .5rem; word-break: break-word; }
+.datos-agencia i { color: var(--turquesa); }
+.datos-agencia a { color: var(--azul); }
+
+@media (max-width: 991.98px) { .caja-reserva { position: static; } }
+
+/* ---------- Paginación con los colores de Explora RD ---------- */
+.pagination { --bs-pagination-color: var(--turquesa); --bs-pagination-active-bg: var(--turquesa); --bs-pagination-active-border-color: var(--turquesa); --bs-pagination-hover-color: var(--turquesa-oscuro); --bs-pagination-focus-box-shadow: 0 0 0 .2rem rgba(14, 138, 146, .2); }
+
+/* =========================================================
+   ETAPA 5 — INICIO DE SESIÓN, REGISTRO Y PANELES
+   ========================================================= */
+
+/* ---------- Mensajes de éxito / error ---------- */
+.alertas-flotantes { position: fixed; top: 90px; right: 20px; z-index: 1080; max-width: min(420px, calc(100vw - 32px)); }
+.alerta {
+    display: flex; align-items: flex-start; gap: .6rem; border: 0; border-radius: 14px;
+    box-shadow: var(--sombra-fuerte); padding-right: 3rem; font-size: .92rem;
+}
+.alerta i { font-size: 1.15rem; line-height: 1.3; }
+.alerta-exito { background: #E6F6F1; color: #0B5B45; }
+.alerta-exito i { color: #12976E; }
+.alerta-error { background: #FDECEC; color: #8A1C1C; }
+.alerta-error i { color: #D64545; }
+
+/* ---------- Pantalla de dos columnas (maqueta 18) ---------- */
+.cuerpo-auth { background: #F5F9F9; }
+.auth { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+
+.auth-lado {
+    position: relative; overflow: hidden; color: var(--blanco);
+    display: flex; flex-direction: column; padding: 56px 72px;
+    /* Cielo turquesa → mar → arena, como en la maqueta */
+    background: linear-gradient(180deg, #5DB8C8 0%, #36B2B8 40%, #18A0A6 62%, #0F8A92 75.6%, #E9D7AE 75.7%, #EAD8B0 100%);
+}
+.auth-logo .logo-texto { color: var(--blanco); }
+.auth-lado-texto { margin-top: 22vh; max-width: 560px; position: relative; z-index: 1; }
+.auth-lado-texto h1 { font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
+.auth-lado-texto p { font-size: 1.15rem; font-weight: 300; opacity: .95; }
+.auth-palmera { position: absolute; width: clamp(120px, 13vw, 210px); right: 7%; bottom: 23.6%; filter: drop-shadow(0 10px 18px rgba(11, 60, 73, .25)); }
+
+.auth-principal {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 48px 24px; position: relative;
+}
+.auth-volver { position: absolute; top: 28px; left: 32px; color: var(--gris-texto); text-decoration: none; font-size: .9rem; }
+.auth-volver:hover { color: var(--turquesa); }
+.auth-principal .alertas-flotantes { top: 24px; }
+
+.auth-tarjeta {
+    width: 100%; max-width: 520px; background: var(--blanco); border-radius: 22px;
+    padding: 48px 44px 40px; box-shadow: 0 18px 50px rgba(11, 60, 73, .10);
+}
+.auth-titulo { font-weight: 700; font-size: 2.1rem; color: var(--azul); margin-bottom: .3rem; }
+.auth-subtitulo { color: var(--gris-texto); margin-bottom: 1.8rem; }
+.auth-tarjeta .form-label { font-weight: 600; font-size: .9rem; color: var(--azul); }
+.auth-tarjeta .form-control { min-height: 50px; border-radius: 12px; border: 1.5px solid #DCE5E7; padding: .7rem 1rem; }
+.auth-tarjeta textarea.form-control { min-height: auto; }
+.auth-tarjeta .form-control:focus { border-color: var(--turquesa); box-shadow: 0 0 0 .2rem rgba(14, 138, 146, .15); }
+.auth-tarjeta .form-check-input:checked { background-color: var(--turquesa); border-color: var(--turquesa); }
+.btn-auth { min-height: 52px; font-size: 1.05rem; border-radius: 12px; }
+.auth-pie { text-align: center; margin: 1.6rem 0 0; color: var(--azul); }
+.auth-pie a, .enlace-suave { color: var(--turquesa); font-weight: 600; text-decoration: none; }
+.enlace-suave { font-weight: 400; color: var(--gris-texto); }
+.auth-pie a:hover, .enlace-suave:hover { text-decoration: underline; color: var(--turquesa-oscuro); }
+.opcional { color: #8A989C; font-weight: 400; font-size: .8rem; }
+
+/* Botón del ojo para ver la contraseña */
+.campo-contrasena { position: relative; }
+.campo-contrasena .form-control { padding-right: 3rem; }
+.ver-contrasena {
+    position: absolute; right: 6px; top: 25px; transform: translateY(-50%);
+    border: 0; background: transparent; color: var(--gris-texto); padding: .4rem .6rem; border-radius: 8px;
+}
+.ver-contrasena:hover { color: var(--turquesa); }
+.campo-contrasena .is-invalid { background-image: none; }
+
+/* Selector «Soy turista / Soy agencia» */
+.selector-rol { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-bottom: 1.6rem; }
+.opcion-rol { cursor: pointer; }
+.opcion-rol input { position: absolute; opacity: 0; pointer-events: none; }
+.opcion-rol span {
+    display: block; height: 100%; padding: .9rem 1rem; border-radius: 14px; border: 1.5px solid #DCE5E7;
+    font-weight: 600; color: var(--azul); transition: all .2s;
+}
+.opcion-rol span i { color: var(--turquesa); margin-right: .25rem; }
+.opcion-rol span small { display: block; font-weight: 400; color: var(--gris-texto); font-size: .78rem; margin-top: .15rem; }
+.opcion-rol input:checked + span { border-color: var(--turquesa); background: var(--turquesa-claro); box-shadow: 0 0 0 3px rgba(14, 138, 146, .12); }
+.opcion-rol input:focus-visible + span { outline: 2px solid var(--turquesa); outline-offset: 2px; }
+
+@media (max-width: 991.98px) {
+    .auth { grid-template-columns: 1fr; }
+    .auth-lado { padding: 28px 24px 120px; min-height: 0; background: linear-gradient(180deg, #5DB8C8 0%, #18A0A6 70%, #0F8A92 100%); }
+    .auth-lado-texto { margin-top: 2rem; }
+    .auth-lado-texto h1 { font-size: 2rem; }
+    .auth-lado-texto p { font-size: 1rem; margin: 0; }
+    .auth-palmera { width: 110px; right: 6%; bottom: -10px; }
+    .auth-principal { padding: 0 16px 48px; margin-top: -80px; }
+    .auth-volver { display: none; }
+    .auth-tarjeta { padding: 32px 22px 28px; }
+    .auth-titulo { font-size: 1.7rem; }
+}
+@media (max-width: 575.98px) { .selector-rol { grid-template-columns: 1fr; } }
+
+/* ---------- Paneles ---------- */
+.panel-cabecera {
+    background: radial-gradient(circle at 85% 0%, rgba(14, 138, 146, .55), transparent 55%), var(--azul);
+    color: var(--blanco); padding: 118px 0 34px;
+}
+.panel-icono {
+    width: 56px; height: 56px; border-radius: 16px; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, .12); font-size: 1.6rem;
+}
+.panel-titulo { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; margin: 0; }
+.panel-subtitulo { opacity: .8; }
+.btn-pastilla-clara { color: var(--blanco); border: 1px solid rgba(255, 255, 255, .4); border-radius: 30px; padding: .45rem 1.1rem; font-size: .9rem; }
+.btn-pastilla-clara:hover { background: var(--blanco); color: var(--azul); }
+
+.caja-panel { background: var(--blanco); border-radius: var(--radio); padding: 1.5rem; box-shadow: var(--sombra); }
+
+.menu-panel { display: flex; flex-direction: column; gap: .4rem; background: var(--blanco); border-radius: var(--radio); padding: .8rem; box-shadow: var(--sombra); }
+.menu-panel a, .menu-panel span {
+    display: flex; align-items: center; gap: .6rem; padding: .7rem .9rem; border-radius: 12px;
+    text-decoration: none; color: var(--azul); font-weight: 500; font-size: .95rem;
+}
+.menu-panel a:hover { background: var(--turquesa-claro); }
+.menu-panel .activo { background: var(--turquesa-claro); color: var(--turquesa-oscuro); font-weight: 600; }
+.menu-panel .desactivado { color: #9AA8AC; cursor: not-allowed; }
+.menu-panel small { margin-left: auto; font-size: .7rem; background: #EEF2F3; padding: .1rem .5rem; border-radius: 20px; }
+
+.tarjeta-total {
+    background: var(--blanco); border-radius: var(--radio); padding: 1.2rem 1.3rem; box-shadow: var(--sombra);
+    display: flex; flex-direction: column; height: 100%;
+}
+.tarjeta-total i { font-size: 1.4rem; color: var(--turquesa); }
+.tarjeta-total span { color: var(--gris-texto); font-size: .85rem; margin-top: .4rem; }
+.tarjeta-total strong { font-size: 2rem; font-family: 'Lora', serif; line-height: 1.1; }
+.total-alerta i { color: #D9822B; }
+
+.tabla-panel thead th { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--gris-texto); font-weight: 600; border-bottom-width: 1px; background: #F5F9F9; }
+.tabla-panel td { font-size: .92rem; }
+
+.estado { display: inline-flex; align-items: center; gap: .3rem; padding: .25rem .7rem; border-radius: 30px; font-size: .78rem; font-weight: 600; white-space: nowrap; }
+.estado-pendiente { background: #FFF3E0; color: #A65E14; }
+.estado-confirmada { background: #E6F6F1; color: #0B7A57; }
+.estado-cancelada { background: #FDECEC; color: #B03030; }
+
+.etiqueta-rol { padding: .2rem .65rem; border-radius: 30px; font-size: .76rem; font-weight: 600; }
+.rol-turista { background: var(--turquesa-claro); color: var(--turquesa-oscuro); }
+.rol-agencia { background: #FFF3E0; color: #A65E14; }
+.rol-administrador { background: #E8E6F8; color: #4B3FA6; }
+
+.fila-reserva { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #EEF2F3; }
+.fila-reserva:last-child { border-bottom: 0; }
+.fila-reserva-foto { width: 84px; height: 64px; border-radius: 12px; overflow: hidden; flex-shrink: 0; }
+.fila-reserva-titulo { font-weight: 600; color: var(--azul); text-decoration: none; }
+.fila-reserva-titulo:hover { color: var(--turquesa); }
+.fila-reserva-datos { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin: .2rem 0 0; color: var(--gris-texto); font-size: .85rem; }
+@media (max-width: 575.98px) { .fila-reserva { flex-wrap: wrap; } .fila-reserva-foto { display: none; } }
+
+/* =========================================================
+   ETAPA 6 — PANEL DE AGENCIAS Y PERFIL PÚBLICO
+   ========================================================= */
+.panel-logo { width: 56px; height: 56px; border-radius: 16px; object-fit: cover; background: var(--blanco); flex-shrink: 0; }
+.panel-icono { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; }
+
+.tarjeta-total-enlace { text-decoration: none; color: var(--azul); transition: transform .2s, box-shadow .2s; }
+.tarjeta-total-enlace:hover { transform: translateY(-3px); box-shadow: var(--sombra-fuerte); color: var(--azul); }
+
+.caja-consejos {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start;
+    background: #FFF8E8; border: 1px solid #F3E2B8; border-radius: var(--radio); padding: 1.1rem 1.3rem; font-size: .92rem;
+}
+.caja-consejos > i { font-size: 1.5rem; color: #D9922B; }
+.caja-consejos ul { padding-left: 1.1rem; margin-top: .3rem; }
+
+.buscador-panel { position: relative; min-width: 230px; }
+.buscador-panel i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--gris-texto); }
+.buscador-panel .form-control { padding-left: 2.2rem; border-radius: 10px; min-height: 42px; }
+
+/* Tabla de excursiones */
+.miniatura { width: 64px; height: 48px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+.fila-oculta td { opacity: .6; }
+.fila-oculta td:last-child, .fila-oculta td:nth-last-child(2) { opacity: 1; }
+
+.interruptor {
+    display: inline-flex; align-items: center; gap: .45rem; border: 0; background: transparent;
+    font-size: .82rem; font-weight: 600; color: var(--gris-texto); padding: .2rem 0; white-space: nowrap;
+}
+.interruptor span { position: relative; width: 36px; height: 20px; border-radius: 20px; background: #CBD5D8; transition: background .2s; }
+.interruptor span::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--blanco); transition: left .2s; }
+.interruptor.encendido { color: var(--turquesa-oscuro); }
+.interruptor.encendido span { background: var(--turquesa); }
+.interruptor.encendido span::after { left: 18px; }
+
+.btn-icono {
+    display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+    border-radius: 10px; border: 1px solid #E1E9EB; background: var(--blanco); color: var(--azul); text-decoration: none;
+}
+.btn-icono:hover { border-color: var(--turquesa); color: var(--turquesa); }
+.btn-icono-peligro:hover { border-color: #D64545; color: #D64545; }
+
+/* Formularios del panel */
+.caja-panel .form-label { font-size: .85rem; font-weight: 600; }
+.caja-panel .form-control, .caja-panel .form-select { border-radius: 10px; }
+.caja-panel .form-check-input:checked { background-color: var(--turquesa); border-color: var(--turquesa); }
+
+.logo-editor-img { width: 96px; height: 96px; border-radius: 22px; object-fit: cover; display: inline-flex; font-size: 1.8rem; box-shadow: var(--sombra); }
+
+.galeria-editor { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: .7rem; }
+.galeria-editor-item { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #EEF2F3; }
+.galeria-editor-item img { width: 100%; height: 100%; object-fit: cover; }
+.galeria-editor-falta { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #9AA8AC; font-size: 1.6rem; }
+.galeria-editor-borrar {
+    position: absolute; top: 6px; right: 6px; width: 30px; height: 30px; border-radius: 50%; border: 0;
+    background: rgba(255, 255, 255, .92); color: #B03030; box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+.galeria-editor-borrar:hover { background: #D64545; color: var(--blanco); }
+
+.foto-editor { aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; background: #EEF2F3; }
+.foto-editor img { width: 100%; height: 100%; object-fit: cover; }
+.foto-editor-vacia { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #9AA8AC; gap: .3rem; }
+.foto-editor-vacia i { font-size: 2.2rem; }
+
+/* Lista pública de agencias */
+.tarjeta-agencia {
+    display: flex; flex-direction: column; height: 100%; text-decoration: none; color: inherit;
+    background: var(--blanco); border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra);
+    transition: transform .3s, box-shadow .3s;
+}
+.tarjeta-agencia:hover { transform: translateY(-6px); box-shadow: var(--sombra-fuerte); color: inherit; }
+.tarjeta-agencia-portada { height: 150px; }
+.tarjeta-agencia-cuerpo { position: relative; padding: 2.6rem 1.3rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+.tarjeta-agencia-logo {
+    position: absolute; top: -34px; left: 1.3rem; width: 68px; height: 68px; border-radius: 18px;
+    object-fit: cover; border: 4px solid var(--blanco); box-shadow: var(--sombra); display: inline-flex; font-size: 1.3rem;
+}
+.tarjeta-agencia h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: .3rem; }
+.tarjeta-agencia-texto { color: var(--gris-texto); font-size: .9rem; margin-bottom: 1rem; }
+
+.banda-unete {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;
+    background: radial-gradient(circle at 90% 20%, rgba(14, 138, 146, .55), transparent 55%), var(--azul);
+    color: var(--blanco); border-radius: var(--radio); padding: 2rem 2.2rem;
+}
+.banda-unete h2 { font-size: 1.6rem; font-weight: 700; }
+.banda-unete p { opacity: .85; }
+
+/* Perfil público */
+.perfil-logo { width: 84px; height: 84px; border-radius: 22px; object-fit: cover; box-shadow: var(--sombra); display: inline-flex; font-size: 1.6rem; flex-shrink: 0; }
+.video-agencia { border-radius: 14px; overflow: hidden; box-shadow: var(--sombra); }
+
+/* =========================================================
+   ETAPA 7 — RESERVAS
+   ========================================================= */
+.btn-confirmar { background: #12976E; color: var(--blanco); border: 0; }
+.btn-confirmar:hover { background: #0B7A57; color: var(--blanco); }
+.btn-contorno-peligro { border: 1.5px solid #E3A0A0; color: #B03030; background: transparent; }
+.btn-contorno-peligro:hover { background: #D64545; border-color: #D64545; color: var(--blanco); }
+.btn-sm.btn-whatsapp-ancho { padding: .3rem .8rem; font-size: .85rem; }
+
+.fila-pendiente td { background: #FFFBF3; }
+.acciones-reserva { flex-wrap: nowrap; white-space: nowrap; }
+.acciones-reserva .btn { white-space: nowrap; }
+.contador-pastilla { display: inline-block; min-width: 1.5rem; padding: 0 .4rem; margin-left: .2rem; border-radius: 20px; background: rgba(11, 60, 73, .08); font-size: .75rem; text-align: center; }
+.pastilla-filtro.activa .contador-pastilla { background: rgba(255, 255, 255, .25); }
+.menu-panel .contador-menu { background: #D9822B !important; color: var(--blanco); font-weight: 700; }
+
+.campanita { position: relative; }
+.campanita-numero {
+    position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 20px;
+    background: #E8590C; color: var(--blanco); font-size: .72rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center;
+}
+
+.comentario-reserva { display: flex; gap: .7rem; background: var(--arena-clara); border-radius: 12px; padding: 1rem; margin-top: 1rem; font-style: italic; color: #36545C; }
+.comentario-reserva i { color: var(--turquesa); font-size: 1.3rem; font-style: normal; }
+
+.aviso-reserva { background: var(--arena-clara); border-radius: 12px; padding: .8rem 1rem; font-size: .88rem; color: var(--gris-texto); margin-bottom: 1rem; }
+.caja-reserva-form textarea.form-control { min-height: auto; }
+
+.fila-reserva-nota { font-size: .85rem; color: var(--turquesa-oscuro); margin: .35rem 0 0; }
+.fila-reserva-apagada .fila-reserva-foto, .fila-reserva-apagada .fila-reserva-titulo { opacity: .55; }
+.fila-reserva { align-items: flex-start; }
+
+/* Admin: traducciones de destinos */
+.traduccion-destino { border: 1px solid #E4ECEE; border-radius: 12px; padding: .8rem 1rem; margin-top: .8rem; }
+.traduccion-destino summary { cursor: pointer; font-weight: 600; }
+
+/* ---------- Páginas de Asesorías y Renta de vehículos ---------- */
+/* El formulario es largo: no se queda fijo para que siempre se pueda ver completo */
+.caja-servicio { position: static; scroll-margin-top: 100px; }
+.caja-servicio-titulo { display: block; font-size: 1.6rem !important; margin: .1rem 0 .2rem; }
+
+.paso-servicio {
+    position: relative; background: var(--blanco); border-radius: var(--radio); padding: 1.4rem;
+    height: 100%; box-shadow: var(--sombra); text-align: center;
+}
+.paso-numero {
+    position: absolute; top: 12px; left: 14px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--arena); color: var(--azul); font-weight: 700; font-size: .85rem;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+.paso-servicio > i { font-size: 2.1rem; color: var(--turquesa); display: block; margin-bottom: .5rem; }
+.paso-servicio h3 { font-size: 1.05rem; font-weight: 600; font-family: 'Poppins', sans-serif; }
+.paso-servicio p { color: var(--gris-texto); font-size: .9rem; margin-bottom: 0; }
+
+.tarjeta-vehiculo {
+    display: flex; gap: 1rem; background: var(--blanco); border-radius: var(--radio);
+    padding: 1.3rem; height: 100%; box-shadow: var(--sombra); border: 1px solid transparent;
+    transition: border-color .2s, transform .2s;
+}
+.tarjeta-vehiculo:hover { border-color: var(--turquesa); transform: translateY(-2px); }
+.tarjeta-vehiculo > i {
+    flex-shrink: 0; width: 54px; height: 54px; border-radius: 14px; background: #E3F3F4;
+    color: var(--turquesa); font-size: 1.6rem; display: inline-flex; align-items: center; justify-content: center;
+}
+.tarjeta-vehiculo h3 { font-size: 1.1rem; font-weight: 600; font-family: 'Poppins', sans-serif; margin-bottom: .2rem; }
+.tarjeta-vehiculo p { color: var(--gris-texto); font-size: .88rem; margin-bottom: .5rem; }
+.tarjeta-vehiculo .tarjeta-vehiculo-pasajeros { color: var(--turquesa-oscuro); font-weight: 600; font-size: .82rem; margin-bottom: .35rem; }
+.enlace-flecha { color: var(--turquesa); font-weight: 600; font-size: .88rem; text-decoration: none; }
+.enlace-flecha:hover { color: var(--azul); }
+.enlace-flecha i { transition: transform .2s; display: inline-block; }
+.enlace-flecha:hover i { transform: translateX(3px); }
+
+/* Solicitudes en «Mi cuenta» y en el panel del administrador */
+.icono-solicitud {
+    width: 64px; height: 64px; border-radius: 12px; background: #E3F3F4; color: var(--turquesa);
+    display: inline-flex; align-items: center; justify-content: center; font-size: 1.7rem; flex-shrink: 0;
+}
+.respuesta-solicitud {
+    background: var(--arena-clara); border-left: 3px solid var(--turquesa); border-radius: 8px;
+    padding: .6rem .9rem; font-size: .88rem; margin: .5rem 0 0;
+}
+
+/* ---------- Reseñas y estrellas ---------- */
+.estrellas { color: #F2B01E; white-space: nowrap; letter-spacing: 1px; }
+.tarjeta-valoracion { font-size: .85rem; margin: -.2rem 0 .5rem; color: var(--gris-texto); }
+.tarjeta-valoracion i { color: #F2B01E; }
+.tarjeta-valoracion strong { color: var(--azul); }
+.caja-reserva-valoracion {
+    display: inline-block; margin-top: .6rem; padding: .25rem .7rem; border-radius: 50px;
+    background: rgba(255, 255, 255, .14); color: var(--blanco); font-size: .82rem; text-decoration: none;
+}
+.caja-reserva-valoracion i { color: #F2B01E; }
+.caja-reserva-valoracion:hover { background: rgba(255, 255, 255, .25); color: var(--blanco); }
+
+.resumen-resenas {
+    display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; align-items: center;
+    background: var(--arena-clara); border-radius: var(--radio); padding: 1.3rem 1.5rem; margin-bottom: 1.5rem;
+}
+.resumen-resenas-nota { text-align: center; min-width: 120px; }
+.resumen-resenas-nota strong { display: block; font-family: 'Lora', serif; font-size: 2.8rem; line-height: 1; color: var(--azul); }
+.resumen-resenas-nota .estrellas { font-size: 1.05rem; display: block; margin: .3rem 0; }
+.resumen-resenas-nota span:last-child { font-size: .85rem; color: var(--gris-texto); }
+.resumen-resenas-barras { flex: 1; min-width: 200px; }
+.barra-estrellas { display: flex; align-items: center; gap: .6rem; font-size: .82rem; margin: .2rem 0; }
+.barra-estrellas > span { width: 34px; color: var(--gris-texto); }
+.barra-estrellas > span i { color: #F2B01E; font-size: .7rem; }
+.barra-estrellas > small { width: 20px; text-align: right; color: var(--gris-texto); }
+.barra-estrellas .barra { flex: 1; height: 8px; background: #E6DCC7; border-radius: 8px; overflow: hidden; }
+.barra-estrellas .barra div { height: 100%; background: var(--turquesa); border-radius: 8px; }
+
+.caja-resena-form {
+    border: 1px solid #E4ECEE; border-radius: var(--radio); padding: 1.3rem 1.5rem; margin-bottom: 1.5rem; background: var(--blanco);
+}
+.caja-resena-form h3 { font-size: 1.15rem; font-weight: 600; font-family: 'Poppins', sans-serif; }
+.caja-resena-form .form-label { font-size: .85rem; font-weight: 600; }
+.caja-resena-form textarea { border-radius: 10px; }
+
+/* Elegir estrellas: los botones van de 5 a 1 y se muestran al revés,
+   así «pasar el ratón» pinta la estrella elegida y todas las de su izquierda */
+.elegir-estrellas { display: inline-flex; flex-direction: row-reverse; gap: .2rem; }
+.elegir-estrellas input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.elegir-estrellas label { font-size: 1.9rem; color: #D6DDE0; cursor: pointer; transition: color .15s, transform .15s; line-height: 1; }
+.elegir-estrellas label:hover, .elegir-estrellas label:hover ~ label,
+.elegir-estrellas input:checked ~ label { color: #F2B01E; }
+.elegir-estrellas label:hover { transform: scale(1.12); }
+.elegir-estrellas input:focus-visible + label { outline: 2px solid var(--turquesa); outline-offset: 2px; border-radius: 4px; }
+
+.resena { padding: 1.1rem 0; border-bottom: 1px solid #EEF2F3; }
+.resena:last-child { border-bottom: 0; }
+.resena-cabecera { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+.resena-cabecera > div { flex: 1; min-width: 120px; }
+.resena-cabecera strong { display: block; font-size: .95rem; }
+.resena-cabecera small { color: var(--gris-texto); font-size: .8rem; text-transform: capitalize; }
+.resena-avatar {
+    width: 42px; height: 42px; border-radius: 50%; background: var(--turquesa); color: var(--blanco);
+    display: inline-flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0;
+}
+.resena p { margin: .6rem 0 0; color: #3D4F55; font-size: .93rem; }
+
+/* ---------- Favoritos (corazón) ---------- */
+.form-favorito { margin: 0; }
+.tarjeta-favorito { position: absolute; right: 12px; bottom: 12px; z-index: 3; }
+.btn-favorito {
+    width: 40px; height: 40px; border-radius: 50%; border: 0; display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, .94); color: var(--azul); font-size: 1.15rem; text-decoration: none;
+    box-shadow: 0 2px 10px rgba(11, 60, 73, .2); transition: transform .2s, color .2s; cursor: pointer;
+}
+.btn-favorito:hover { transform: scale(1.1); color: #E0475B; }
+.btn-favorito.activo { color: #E0475B; }
+.btn-favorito:disabled { opacity: .7; }
+.btn-favorito.latido i { animation: latido .45s ease; }
+@keyframes latido { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+
+/* En la ficha: botón ancho con texto */
+.caja-reserva-favorito { padding: 0 1.5rem 1.5rem; margin-top: -.6rem; }
+.btn-favorito-grande {
+    width: 100%; height: auto; border-radius: 50px; gap: .5rem; padding: .7rem 1rem; font-size: .95rem; font-weight: 500;
+    background: var(--blanco); border: 1.5px solid #E2E8EA; box-shadow: none;
+}
+.btn-favorito-grande:hover { transform: none; border-color: #E0475B; }
+.btn-favorito-grande.activo { border-color: #E0475B; background: #FFF3F5; }
+
+/* Panel de la agencia: favoritos y estrellas */
+.franja-agencia {
+    display: flex; flex-wrap: wrap; gap: .6rem 2rem; background: var(--blanco); border-radius: var(--radio);
+    padding: .9rem 1.3rem; box-shadow: var(--sombra); font-size: .9rem; color: var(--gris-texto);
+}
+.franja-agencia strong { color: var(--azul); }
+.franja-agencia .bi-heart-fill { color: #E0475B; }
+.franja-agencia .bi-star-fill { color: #F2B01E; }
+
+/* ---------- Mapa de destinos (Leaflet + OpenStreetMap) ---------- */
+.caja-mapa { background: var(--blanco); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.2rem; }
+.caja-mapa-titulo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .3rem 1rem; margin-bottom: .9rem; }
+.caja-mapa-titulo h2 { font-size: 1.35rem; }
+.caja-mapa-titulo h2 i { color: var(--turquesa); }
+.caja-mapa-titulo small { color: var(--gris-texto); }
+
+.mapa-explora { width: 100%; border-radius: 14px; overflow: hidden; background: #DCEFF0; position: relative; z-index: 0; }
+.mapa-grande { height: 420px; }
+.mapa-pequeno { height: 200px; }
+@media (max-width: 575.98px) { .mapa-grande { height: 340px; } }
+.mapa-cargando { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: .5rem; margin: 0; color: var(--gris-texto); }
+
+/* Marcadores redondos con el ícono del tipo de destino */
+.marcador-explora {
+    display: flex; align-items: center; justify-content: center; border-radius: 50%;
+    color: var(--blanco); font-size: 1.05rem; border: 3px solid var(--blanco);
+    box-shadow: 0 3px 10px rgba(11, 60, 73, .35); transition: transform .15s;
+}
+.marcador-explora:hover { transform: scale(1.15); }
+.marcador-playa { background: var(--turquesa); }
+.marcador-montana { background: #3E8E4F; }
+.marcador-ciudad { background: var(--azul); }
+
+.leyenda-mapa { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: .8rem; font-size: .85rem; color: var(--gris-texto); }
+.punto-leyenda { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: -1px; margin-right: .25rem; }
+
+/* Globo que se abre al tocar un marcador */
+.leaflet-popup-content-wrapper { border-radius: 14px; padding: 0; overflow: hidden; }
+.leaflet-popup-content { margin: 0; font-family: 'Poppins', sans-serif; }
+.globo-mapa img { width: 100%; height: 110px; object-fit: cover; display: block; }
+.globo-mapa-texto { padding: .7rem .9rem .8rem; }
+.globo-mapa-texto small { display: block; color: var(--gris-texto); font-size: .72rem; }
+.globo-mapa-texto strong { display: block; font-family: 'Lora', serif; font-size: 1.05rem; color: var(--azul); margin: .1rem 0 .3rem; }
+.globo-mapa-texto a { color: var(--turquesa); font-weight: 600; font-size: .82rem; text-decoration: none; }
+
+/* ---------- Página de galería ---------- */
+.pastilla-filtro small { opacity: .7; font-size: .75rem; margin-left: .15rem; }
+button.pastilla-filtro { font-family: inherit; }
+
+/* Mosaico: columnas donde cada foto conserva su forma */
+.mosaico { columns: 3 260px; column-gap: 1rem; }
+.mosaico-pieza {
+    position: relative; display: block; width: 100%; margin: 0 0 1rem; padding: 0; border: 0;
+    border-radius: var(--radio); overflow: hidden; background: #DCEFF0; cursor: zoom-in;
+    break-inside: avoid; box-shadow: var(--sombra);
+}
+.mosaico-pieza[hidden] { display: none; }
+.mosaico-pieza img { width: 100%; height: auto; display: block; transition: transform .5s; }
+.mosaico-pieza:hover img, .mosaico-pieza:focus-visible img { transform: scale(1.05); }
+.mosaico-pieza:focus-visible { outline: 3px solid var(--turquesa); outline-offset: 3px; }
+.mosaico-texto {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .8rem; text-align: left;
+    background: linear-gradient(transparent, rgba(11, 60, 73, .85)); color: var(--blanco);
+}
+.mosaico-texto strong { display: block; font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.25; }
+.mosaico-texto small { opacity: .85; font-size: .78rem; }
+.mosaico-lupa {
+    position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(255, 255, 255, .9); color: var(--azul); display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; opacity: 0; transition: opacity .2s;
+}
+.mosaico-pieza:hover .mosaico-lupa, .mosaico-pieza:focus-visible .mosaico-lupa { opacity: 1; }
+
+/* Visor en grande */
+.visor .modal-content { background: #061F26; border: 0; border-radius: var(--radio); overflow: hidden; color: var(--blanco); }
+.visor img#visorImagen { width: 100%; max-height: 75vh; object-fit: contain; display: block; background: #061F26; transition: opacity .2s; }
+.visor img.cambiando { opacity: .3; }
+.visor-pie { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; padding: 1rem 1.3rem 1.2rem; }
+.visor-pie h2 { font-size: 1.3rem; margin: 0; color: var(--blanco); }
+.visor-pie p { margin: .1rem 0 0; font-size: .85rem; opacity: .8; }
+.visor-credito a { color: #7FD6DC; }
+.visor-acciones { display: flex; align-items: center; gap: 1rem; font-size: .85rem; opacity: .95; }
+.visor-boton {
+    position: absolute; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0;
+    background: rgba(255, 255, 255, .9); color: var(--azul); font-size: 1.2rem;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+.visor-boton:hover { background: var(--blanco); color: var(--turquesa); }
+.visor-cerrar { top: 12px; right: 12px; }
+.visor-foto { position: relative; }
+.visor-anterior, .visor-siguiente { top: 50%; transform: translateY(-50%); }
+.visor-anterior { left: 12px; }
+.visor-siguiente { right: 12px; }
+@media (max-width: 575.98px) {
+    .visor-anterior, .visor-siguiente { width: 38px; height: 38px; }
+}
+
+/* Panel del administrador: reporte de Python dentro de la página */
+.marco-reporte { width: 100%; height: 1400px; border: 0; border-radius: var(--radio); box-shadow: var(--sombra); background: var(--blanco); }
+@media (max-width: 767.98px) { .marco-reporte { height: 1900px; } }
+
+/* ---------- Asistente con IA «Pregúntale a Explora RD» ---------- */
+.asistente-boton {
+    position: fixed; right: 22px; bottom: 86px; z-index: 1050;
+    display: inline-flex; align-items: center; gap: .45rem; border: 0;
+    background: var(--azul); color: var(--blanco); padding: .6rem 1.1rem; border-radius: 40px;
+    font-weight: 600; font-size: .92rem; box-shadow: 0 10px 28px rgba(11, 60, 73, .35); transition: transform .2s;
+}
+.asistente-boton i { color: #F2C14E; font-size: 1.1rem; }
+.asistente-boton:hover, .asistente-boton.activo { transform: scale(1.04); background: var(--turquesa-oscuro, #0A6B72); }
+.asistente-panel {
+    position: fixed; right: 22px; bottom: 140px; z-index: 1060;
+    width: 380px; max-width: calc(100vw - 32px); height: 540px; max-height: calc(100vh - 170px);
+    display: flex; flex-direction: column; background: var(--blanco); border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(11, 60, 73, .3); overflow: hidden;
+}
+.asistente-panel[hidden] { display: none; }
+.asistente-cabecera { display: flex; align-items: center; gap: .7rem; background: var(--azul); color: var(--blanco); padding: .85rem 1rem; }
+.asistente-cabecera h2 { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; margin: 0; color: var(--blanco); }
+.asistente-cabecera small { opacity: .8; font-size: .75rem; }
+.asistente-cabecera > div { flex: 1; }
+.asistente-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--turquesa); display: inline-flex; align-items: center; justify-content: center; color: #F2C14E; }
+.asistente-icono { border: 0; background: transparent; color: var(--blanco); width: 34px; height: 34px; border-radius: 50%; }
+.asistente-icono:hover { background: rgba(255, 255, 255, .15); }
+.asistente-mensajes { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; background: #F3F8F8; }
+.asistente-mensaje { max-width: 88%; padding: .65rem .9rem; border-radius: 16px; font-size: .9rem; line-height: 1.45; white-space: pre-line; overflow-wrap: anywhere; }
+.asistente-ia { background: var(--blanco); color: #1B2B30; border-bottom-left-radius: 4px; align-self: flex-start; box-shadow: 0 2px 6px rgba(11, 60, 73, .06); }
+.asistente-ia a { color: var(--turquesa-oscuro, #0A6B72); font-weight: 600; }
+.asistente-turista { background: var(--turquesa); color: var(--blanco); border-bottom-right-radius: 4px; align-self: flex-end; }
+.asistente-esperando { color: #5B6E73; font-style: italic; }
+.asistente-alerta { background: #FFF8E8; border: 1px solid #F3E2B8; }
+.asistente-sugerencias { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; }
+.asistente-sugerencias[hidden] { display: none; }
+.asistente-sugerencia {
+    border: 1px solid #CFE3E4; background: var(--blanco); color: var(--azul); border-radius: 20px;
+    padding: .4rem .8rem; font-size: .82rem; text-align: left;
+}
+.asistente-sugerencia:hover { border-color: var(--turquesa); color: var(--turquesa); }
+.asistente-formulario { display: flex; gap: .5rem; padding: .7rem; border-top: 1px solid #E4ECEE; background: var(--blanco); }
+.asistente-formulario textarea {
+    flex: 1; resize: none; border: 1px solid #DCE7E8; border-radius: 14px; padding: .55rem .8rem;
+    font-size: .9rem; max-height: 110px; font-family: inherit;
+}
+.asistente-formulario textarea:focus { outline: 2px solid var(--turquesa); outline-offset: 1px; border-color: transparent; }
+.asistente-enviar { border: 0; width: 44px; border-radius: 14px; background: var(--turquesa); color: var(--blanco); font-size: 1.05rem; }
+.asistente-enviar:hover { background: var(--azul); }
+.asistente-aviso { font-size: .7rem; color: #5B6E73; text-align: center; margin: 0; padding: 0 .8rem .6rem; background: var(--blanco); }
+/* Modo «Próximamente» (sin clave de la IA) */
+.etiqueta-pronto {
+    display: inline-block; background: #F2C14E; color: var(--azul); font-size: .68rem; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase; padding: .12rem .5rem; border-radius: 20px; margin: 0 0 0 .25rem;
+}
+.asistente-panel:has(.asistente-pronto) { height: auto; }
+.asistente-pronto { padding: 1.6rem 1.4rem 1.4rem; text-align: center; background: #F3F8F8; }
+.asistente-pronto-icono {
+    width: 64px; height: 64px; border-radius: 50%; background: var(--azul); color: #F2C14E; font-size: 1.8rem;
+    display: inline-flex; align-items: center; justify-content: center; margin-bottom: .6rem;
+}
+.asistente-pronto .etiqueta-pronto { margin: 0 0 .6rem; font-size: .75rem; }
+.asistente-pronto h3 { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 700; color: var(--azul); margin-bottom: .6rem; }
+.asistente-pronto p { font-size: .9rem; color: #3E555B; margin-bottom: .6rem; }
+.asistente-pronto .btn { margin-top: .4rem; }
+
+@media (max-width: 575.98px) {
+    .asistente-boton { right: 16px; bottom: 76px; }
+    .asistente-boton span { display: none; }
+    .asistente-boton { padding: .75rem; }
+    .asistente-panel { right: 16px; left: 16px; width: auto; bottom: 130px; max-height: calc(100vh - 150px); }
+}
+
+/* Respeta a quien prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}

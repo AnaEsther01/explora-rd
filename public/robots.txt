@@ -1,0 +1,12 @@
+User-agent: *
+# Las zonas privadas no deben aparecer en Google
+Disallow: /agencia/
+Disallow: /admin
+Disallow: /mi-cuenta
+Disallow: /login
+Disallow: /registro
+Disallow: /olvide-mi-contrasena
+Disallow: /restablecer-contrasena/
+
+# Cuando la página tenga su dominio, cambia la dirección de abajo por la real:
+# Sitemap: https://www.tu-dominio.com/sitemap.xml

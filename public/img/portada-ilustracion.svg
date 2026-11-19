@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- Fondo provisional de la portada: playa al atardecer con palmera y cabañas sobre el agua.
+       Se reemplaza solo cuando exista public/img/portada.jpg -->
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5E9FA6"/>
+      <stop offset=".45" stop-color="#9CCFC8"/>
+      <stop offset=".62" stop-color="#E4E8C9"/>
+    </linearGradient>
+    <linearGradient id="mar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5DB7B0"/>
+      <stop offset=".35" stop-color="#2E9C9C"/>
+      <stop offset="1" stop-color="#16757C"/>
+    </linearGradient>
+    <radialGradient id="sol" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF6D6" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#FFF1C2" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FFF1C2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hoja" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#20473A"/>
+      <stop offset="1" stop-color="#2F6450"/>
+    </linearGradient>
+    <filter id="difuso"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="suave"><feGaussianBlur stdDeviation="2.2"/></filter>
+  </defs>
+
+  <!-- Cielo y sol -->
+  <rect width="1600" height="600" fill="url(#cielo)"/>
+  <circle cx="560" cy="540" r="260" fill="url(#sol)"/>
+
+  <!-- Nubes -->
+  <g fill="#FFFFFF" opacity=".55" filter="url(#difuso)">
+    <ellipse cx="260" cy="140" rx="220" ry="40"/>
+    <ellipse cx="420" cy="210" rx="160" ry="28"/>
+    <ellipse cx="1350" cy="330" rx="230" ry="36"/>
+    <ellipse cx="1480" cy="250" rx="150" ry="26"/>
+    <ellipse cx="900" cy="90" rx="260" ry="34"/>
+  </g>
+
+  <!-- Isla lejana -->
+  <path d="M1150 588 Q1260 560 1380 586 Q1460 578 1600 590 L1600 600 L1150 600Z" fill="#3E7F76" opacity=".55"/>
+
+  <!-- Mar -->
+  <rect y="590" width="1600" height="310" fill="url(#mar)"/>
+  <g stroke="#E9FBF6" stroke-linecap="round" opacity=".35">
+    <path d="M420 618 H700" stroke-width="3"/>
+    <path d="M500 640 H660" stroke-width="2"/>
+    <path d="M820 660 H1040" stroke-width="2"/>
+    <path d="M200 700 H380" stroke-width="2"/>
+    <path d="M1100 720 H1360" stroke-width="2"/>
+    <path d="M560 760 H760" stroke-width="2"/>
+  </g>
+
+  <!-- Orilla y arena -->
+  <path d="M0 830 Q420 790 900 830 T1600 812 L1600 900 L0 900Z" fill="#CDBB8E" opacity=".9"/>
+  <path d="M0 818 Q420 780 900 820 T1600 802" fill="none" stroke="#F3F7EE" stroke-width="5" opacity=".6"/>
+
+  <!-- Cabañas sobre el agua -->
+  <g fill="#1D3A3C">
+    <rect x="40" y="628" width="430" height="7" rx="3"/>
+    <g>
+      <path d="M70 600 L130 566 L190 600Z"/><rect x="82" y="600" width="96" height="26"/>
+      <rect x="92" y="626" width="4" height="34"/><rect x="164" y="626" width="4" height="34"/>
+    </g>
+    <g>
+      <path d="M220 592 L290 552 L360 592Z"/><rect x="234" y="592" width="112" height="32"/>
+      <rect x="246" y="624" width="4" height="38"/><rect x="330" y="624" width="4" height="38"/>
+    </g>
+    <g>
+      <path d="M380 606 L430 578 L480 606Z"/><rect x="390" y="606" width="80" height="22"/>
+      <rect x="398" y="628" width="4" height="30"/><rect x="458" y="628" width="4" height="30"/>
+    </g>
+  </g>
+  <g fill="#1D3A3C" opacity=".35">
+    <rect x="40" y="664" width="430" height="10" rx="5" filter="url(#suave)"/>
+  </g>
+
+  <!-- Palmera inclinada -->
+  <path d="M760 930 C 820 760, 980 520, 1160 300 C 1185 270, 1200 250, 1215 232
+           L 1235 246 C 1220 268, 1205 288, 1180 318 C 1010 530, 860 770, 815 930Z" fill="#2A3A30"/>
+  <g stroke="#3B4E40" stroke-width="3" opacity=".7">
+    <path d="M800 860 l30 10"/><path d="M840 780 l30 12"/><path d="M885 700 l30 12"/>
+    <path d="M935 620 l30 12"/><path d="M990 540 l28 12"/><path d="M1050 460 l26 12"/><path d="M1110 385 l24 12"/>
+  </g>
+  <g fill="url(#hoja)">
+    <path d="M1225 238 C 1100 150, 900 140, 720 220 C 900 170, 1080 190, 1225 238Z"/>
+    <path d="M1225 238 C 1110 230, 960 300, 860 420 C 980 320, 1110 270, 1225 238Z"/>
+    <path d="M1225 238 C 1160 280, 1100 380, 1080 520 C 1130 400, 1180 310, 1225 238Z"/>
+    <path d="M1225 238 C 1320 120, 1460 80, 1600 110 C 1460 110, 1340 160, 1225 238Z"/>
+    <path d="M1225 238 C 1360 210, 1500 260, 1600 360 C 1490 290, 1360 250, 1225 238Z"/>
+    <path d="M1225 238 C 1300 300, 1360 400, 1380 540 C 1330 410, 1280 320, 1225 238Z"/>
+    <path d="M1225 238 C 1200 120, 1240 20, 1320 -20 C 1260 50, 1235 140, 1225 238Z"/>
+    <path d="M1225 238 C 1120 100, 980 30, 840 30 C 980 60, 1110 140, 1225 238Z"/>
+  </g>
+  <g fill="#18362C" opacity=".8">
+    <path d="M1225 238 C 1060 200, 900 230, 780 300 C 910 250, 1070 230, 1225 238Z"/>
+    <path d="M1225 238 C 1380 160, 1520 170, 1600 210 C 1510 200, 1380 200, 1225 238Z"/>
+  </g>
+  <circle cx="1218" cy="250" r="12" fill="#3B2E1C"/>
+  <circle cx="1238" cy="256" r="11" fill="#4A3820"/>
+</svg>
